@@ -101,3 +101,6 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+        
+        
+        # this has been a wonderful project yeuyyy
