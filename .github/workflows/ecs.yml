@@ -43,7 +43,7 @@ env:
 
 permissions:
   contents: read
-
+  id-token: write
 jobs:
   deploy:
     name: Deploy
@@ -69,7 +69,7 @@ jobs:
         aws-region: ua-east-1
         role-to-assume: arn:aws:iam::650939046310:role/Assumeroleforgithub       
         role-session-name: Test-session
-        
+        audience: sts.amazonaws.com        
     - name: push to s3 
       run: aws s3 mv target/*war s3://accessngwa  
 
